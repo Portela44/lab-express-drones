@@ -1,7 +1,7 @@
 <h2>Available drones</h2>
 <ul>
     {{#each drones}}
-        <li>{{name}} - propellers: {{propellers}} - maxSpeed:{{maxSpeed}}</li>
+        <li><a href="/drones/{{_id}}/edit">{{name}}</a> - propellers: {{propellers}} - maxSpeed:{{maxSpeed}}</li>
     {{/each}}
 </ul>
 <a href="/drones/create">Create a drone</a>

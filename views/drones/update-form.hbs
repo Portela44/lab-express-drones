@@ -1,1 +1,9 @@
 <h2>Update the drone</h2>
+{{#with droneFromDB}}
+    <form action="/drones/{{_id}}/edit" method="post">
+        <input type="text" name="name" value="{{name}}">
+        <input type="text" name="propellers" value="{{propellers}}">
+        <input type="text" name="maxSpeed" value="{{maxSpeed}}">
+        <button type="submit">Edit drone</button>
+    </form>
+{{/with}}
