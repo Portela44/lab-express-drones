@@ -13,7 +13,7 @@ const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/lab-express-dr
 mongoose.connect(MONGO_URI)
     .then(x => console.log(`Connected to ${x.connection.name}`))
     .then(() => {
-        return Drone.create()
+        return Drone.create(drones)
     })
     .catch(err => console.log(err))
     .finally(() => {
